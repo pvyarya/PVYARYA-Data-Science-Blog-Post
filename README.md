@@ -69,7 +69,7 @@ RMSE for overall prediction error
 
 
 **Summary of Results**
-I was able to create a linear regression machine learning model. The model is fairly robust, but there may be underfitting. However, the low test error suggests using the model will provide useful predictions. A very good intial model iteration is created and can be applied to real-world decision-making.
+I was able to create a linear regression machine learning model. The model is fairly robust, but there may be underfitting present. However, the low test error suggests using the model will provide useful predictions. A very good intial model iteration is created and can be applied to real-world decision-making.
 
 **Acknowledgments** 
 To The World Bank Databank for providing the dataset for the project.
