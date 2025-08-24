@@ -1,9 +1,9 @@
 # PVYARYA-Data-Science-Blog-Post
-Motivation
+**Motivation**
 
-The goal of this project is to walk through the CRISP-DM process to build and evaluate a predictive machine learning model, while also effectively communicating findings to stakeholders. The project highlights exploratory data analysis, model development, evaluation, and interpretation of results in a business-relevant context. We aim to build a linear regression machine learning model to predict the GDP growth rate.
+The goal of this project is to walk through the CRISP-DM process to build and evaluate a predictive machine learning model, while also effectively communicating findings to an audience in the form of a blog. The project highlights exploratory data analysis, model development, evaluation, and interpretation of results. We aim to build a linear regression machine learning model to predict the GDP growth rate.
 
-Libraries Used
+**Libraries Used**
 
 This project makes use of the following Python libraries:
 
@@ -17,76 +17,45 @@ scikit-learn – for model building, evaluation, and metrics
 
 jupyter notebook – for running and presenting analyses interactively
 
-Files in This Repository
+**Files in This Repository**
 
-README.md → Project overview, methodology, and results (this file)
+README.md - Project overview, methodology, and results (this file)
 
-data/ → Dataset(s) used in the analysis (not included here for privacy reasons)
+GDP_GROWTH.csv - Dataset used in the analysis
 
-notebooks/Exploratory_Data_Analysis.ipynb → Exploratory Data Analysis (EDA) with visualizations and summary statistics
+PVYARYA UNEMPLOYMENT.ipynb - notebook containg Exploratory Data Analysis with visualizations and summary statistics, missing values handling, model training, and evaluation
 
-notebooks/Data_Cleaning_and_Preprocessing.ipynb → Data wrangling, missing values handling, and feature engineering
+**CRISP-DM**
 
-notebooks/Model_Training_and_Evaluation.ipynb → Model training, evaluation (accuracy, recall, precision, F1, ROC/AUC)
+•	Business Understanding
+  •	Objective: Create a model to predict UK GDP growth using macroeconomic features
+  •	Key Questions:
+Can we forecast UK GDP growth using macroeconomic features like inflation, unemployment, lending rates, and consumer prices?
+What relationships do we expect between our macroeconomic features and GDP growth rate?
+How well can the model handle external shocks?
+•	Data Understanding
+  •	Data Sources: The World Bank Databank
+  •	Data Exploration: 
+Some years show negative GDP growth despite low unemployment, highlighting external shocks like COVID-19 in 2020.
+High inflation years coincide with high lending rates, reflecting monetary tightening to control inflation.
+Extreme recession events such as in 2009 and 2020 show sharp GDP declines. While macro features explain trends, external shocks can have large effects that the models may not be able to predict; we will observe how well the model handles predicting these shocks
+GDP growth reacts with a lag to changes in interest rates or unemployment; to develop the model further, one could benefit from adding lagged variables.
+•	Data Preparation
+  •	Cleaining: ffill() is required as columns values have null values. NB: modelling cannot be done if there are NA values
+  •	Feature Selection: GDP level was not selected, due to its constant trend upwards; not much value can be derived from this. All other feaures had some value
+•	Modeling
+  •	Used linear regression models
+•	Evaluation
+Model validated with unseen data to ensure generalisation
+  •	Metrics: 
+Relative errors
+RMSE for overall prediction error
+•	Deployment
+  •	Created a good initial model; improvements can be made including other features for modelling (both macro variables and not), a larger data set (through utilising perhaps monthly data set), finding equivalent data with more data points, and using alternative models, such as ARIMAX.
 
-reports/Results_Summary.pdf → Summary of results and stakeholder-focused interpretation
 
-🔎 Key Steps (CRISP-DM Process)
+**Summary of Results**
+I was able to create a linear regression machine learning model. The model is fairly robust, but there may be underfitting. However, the low test error suggests using the model will provide useful predictions. A very good intial model iteration is created and can be applied to real-world decision-making.
 
-Business Understanding
-
-Define the prediction problem and determine its business value.
-
-Data Understanding (Exploratory Data Analysis)
-
-Generated distribution plots and histograms to inspect variable distributions.
-
-Identified skewed variables and potential outliers.
-
-Performed correlation analysis to assess feature relationships.
-
-Data Preparation
-
-Cleaned missing and inconsistent values.
-
-Encoded categorical features where necessary.
-
-Scaled/normalized numerical variables to prepare for modeling.
-
-Modeling
-
-Selected a classification model appropriate for the data (e.g., Logistic Regression / Decision Tree / Random Forest).
-
-Trained the model and tuned hyperparameters for better performance.
-
-Evaluation
-
-Evaluated model with accuracy, recall, precision, F1-score, and ROC-AUC.
-
-Results showed the model achieved good overall accuracy, with recall highlighted as a key metric due to potential class imbalance.
-
-Deployment (Scenario + Prediction)
-
-Created a real-world scenario requiring prediction from the trained model.
-
-Example: Given a new observation (feature inputs), the model predicts the likelihood of the positive class.
-
-This prediction provides actionable insights for decision-makers (e.g., predicting customer churn → who might need retention efforts).
-
-📊 Summary of Results
-
-The exploratory data analysis revealed several skewed variables that benefited from scaling.
-
-The chosen model (e.g., Random Forest) provided balanced performance across evaluation metrics.
-
-Recall was prioritized to minimize false negatives in the business context.
-
-Predictions generated in the example scenario demonstrated how the model can be applied to real-world decision-making.
-
-🙏 Acknowledgments
-
-Udacity Data Science Nanodegree program for guidance and project structure.
-
-Scikit-Learn and Python open-source community for tools and libraries.
-
-Stakeholders and dataset providers whose data made this analysis possible.
+**Acknowledgments** 
+To The World Bank Databank for providing the dataset for the project.
