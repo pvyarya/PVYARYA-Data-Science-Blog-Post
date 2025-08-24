@@ -28,14 +28,18 @@ PVYARYA UNEMPLOYMENT.ipynb - notebook containg Exploratory Data Analysis with vi
 **CRISP-DM**
 
 •	Business Understanding
+  
   •	Objective: Create a model to predict UK GDP growth using macroeconomic features
+ 
   •	Key Questions:
 Can we forecast UK GDP growth using macroeconomic features like inflation, unemployment, lending rates, and consumer prices?
 What relationships do we expect between our macroeconomic features and GDP growth rate?
 How well can the model handle external shocks?
 
 •	Data Understanding
+  
   •	Data Sources: The World Bank Databank
+ 
   •	Data Exploration: 
 Some years show negative GDP growth despite low unemployment, highlighting external shocks like COVID-19 in 2020.
 High inflation years coincide with high lending rates, reflecting monetary tightening to control inflation.
@@ -43,19 +47,24 @@ Extreme recession events such as in 2009 and 2020 show sharp GDP declines. While
 GDP growth reacts with a lag to changes in interest rates or unemployment; to develop the model further, one could benefit from adding lagged variables.
 
 •	Data Preparation
+ 
   •	Cleaining: ffill() is required as columns values have null values. NB: modelling cannot be done if there are NA values
+ 
   •	Feature Selection: GDP level was not selected, due to its constant trend upwards; not much value can be derived from this. All other feaures had some value
 
 •	Modeling
+ 
   •	Used linear regression models
 
 •	Evaluation
 Model validated with unseen data to ensure generalisation
+  
   •	Metrics: 
 Relative errors
 RMSE for overall prediction error
 
 •	Deployment
+  
   •	Created a good initial model; improvements can be made including other features for modelling (both macro variables and not), a larger data set (through utilising perhaps monthly data set), finding equivalent data with more data points, and using alternative models, such as ARIMAX.
 
 
