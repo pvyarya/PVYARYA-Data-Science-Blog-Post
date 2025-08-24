@@ -33,7 +33,7 @@ PVYARYA UNEMPLOYMENT.ipynb - notebook containg Exploratory Data Analysis with vi
  
   •	Key Questions:
 Can we forecast UK GDP growth using macroeconomic features like inflation, unemployment, lending rates, and consumer prices?
-What relationships do we expect between our macroeconomic features and GDP growth rate?
+What relationships do we observe between our macroeconomic features and GDP growth rate?
 How well can the model handle external shocks?
 
 •	Data Understanding
