@@ -1,9 +1,9 @@
 # PVYARYA-Data-Science-Blog-Post
 Motivation
 
-The goal of this project is to walk through the CRISP-DM process to build and evaluate a predictive machine learning model, while also effectively communicating findings to stakeholders. The project highlights exploratory data analysis, model development, evaluation, and interpretation of results in a business-relevant context.
+The goal of this project is to walk through the CRISP-DM process to build and evaluate a predictive machine learning model, while also effectively communicating findings to stakeholders. The project highlights exploratory data analysis, model development, evaluation, and interpretation of results in a business-relevant context. We aim to build a linear regression machine learning model to predict the GDP growth rate.
 
-📚 Libraries Used
+Libraries Used
 
 This project makes use of the following Python libraries:
 
@@ -17,7 +17,7 @@ scikit-learn – for model building, evaluation, and metrics
 
 jupyter notebook – for running and presenting analyses interactively
 
-📂 Files in This Repository
+Files in This Repository
 
 README.md → Project overview, methodology, and results (this file)
 
