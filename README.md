@@ -71,5 +71,7 @@ RMSE for overall prediction error
 **Summary of Results**
 I was able to create a linear regression machine learning model. The model is fairly robust, but there may be underfitting present. However, the low test error suggests using the model will provide useful predictions. A very good intial model iteration is created and can be applied to real-world decision-making.
 
+Please see attached the link to the blog, which summarises the results at a high level: https://medium.com/@pranav.arya.pa/is-it-possible-to-predict-the-growth-rate-of-the-uk-before-results-are-released-48c5c5d80bec
+
 **Acknowledgments** 
 To The World Bank Databank for providing the dataset for the project.
